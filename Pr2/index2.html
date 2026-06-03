@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Запис на грумінг для тварин</title>
+</head>
+<body>
+
+    <header>
+        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=400&auto=format&fit=crop&q=60" alt="Собака на грумінгу" width="400">
+        <h1>Салон краси для тварин «Лапки-Вушка»</h1>
+        <p>Запишіть свого улюбленця на професійний догляд!</p>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Онлайн-запис на процедуру</h2>
+        
+        <form action="/submit-grooming" method="POST">
+            
+            <fieldset>
+                <legend>Інформація про улюбленця та послуги</legend>
+
+                <p>
+                    <label for="breed">Порода тварини (або вид):</label><br>
+                    <input type="text" id="breed" name="breed" placeholder="Наприклад, Йоркширський тер'єр" required>
+                </p>
+
+                <p>
+                    <label for="weight">Вага тварини (в кг):</label><br>
+                    <input type="number" id="weight" name="weight" min="0.1" max="100" step="0.1" placeholder="5.5" required>
+                </p>
+
+                <p>Основний тип послуги:</p>
+                <label>
+                    <input type="radio" name="service_type" value="haircut" checked> Стрижка
+                </label><br>
+                <label>
+                    <input type="radio" name="service_type" value="washing"> Миття та вичісування
+                </label><br>
+                <label>
+                    <input type="radio" name="service_type" value="complex"> Комплексний догляд (усе разом)
+                </label>
+
+                <p>Додаткові послуги (за бажанням):</p>
+                <label>
+                    <input type="checkbox" name="addons" value="claws"> Підрізання кігтів
+                </label><br>
+                <label>
+                    <input type="checkbox" name="addons" value="ears"> Чищення вух та очей
+                </label>
+
+                <p>
+                    <label for="visit_date">Бажана дата візиту:</label><br>
+                    <input type="date" id="visit_date" name="visit_date" required>
+                </p>
+
+                <p>
+                    <label for="master">Оберіть майстра:</label><br>
+                    <select id="master" name="master">
+                        <option value="any">Будь-який вільний спеціаліст</option>
+                        <option value="olena">Олена (спеціаліст по собаках)</option>
+                        <option value="dmytro">Дмитро (спеціаліст по котах)</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="comments">Особливості тварини або коментар (алергії, характер):</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Наприклад: собака боїться фену..."></textarea>
+                </p>
+
+            </fieldset>
+
+            <br>
+            <button type="submit">Підтвердити запис</button>
+        </form>
+
+        <hr>
+
+        <h3>Як проходить процес догляду в нашому салоні:</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CpLAjwaI0pI?si=ATdEcMnimYPmx807" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </main>
+
+    <footer>
+        <hr>
+        <h3>Де ми знаходимося (Контакти):</h3>
+        <p>Адреса: вул. Зоологічна, 12, Зоосалон «Лапки-Вушка»</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.334005891391!2d30.4578841!3d50.4534726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDI3JzEyLjUiTiAzMMKwMjcnMjguNCJF!5e0!3m2!1suk!2sua!4v1711111111111!5m2!1suk!2sua" 
+            width="600" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <h3>Послухайте заспокійливий трек, який ми вмикаємо тваринкам під час стрижки:</h3>
+        <figure>
+            <figcaption>Релакс-мелодія:</figcaption>
+            <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+        </figure>
+        
+        <p>&copy; 2026 Грумінг-салон «Лапки-Вушка». Всі права захищені.</p>
+    </footer>
+
+</body>
+</html>

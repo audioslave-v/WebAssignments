@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мобільне меню на Flexbox (Варіант 10)</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">FlexMenu</div>
+        
+        <button class="burger-menu" id="burgerBtn" aria-label="Відкрити меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#" class="nav-link">Головна</a>
+            <a href="#" class="nav-link">Послуги</a>
+            <a href="#" class="nav-link">Портфоліо</a>
+            <a href="#" class="nav-link">Про нас</a>
+            <a href="#" class="nav-link">Контакти</a>
+        </nav>
+    </header>
+
+   <main class="center-container">
+    <h2>Демонстрація</h2>
+    <p>Зменшіть ширину екрана браузера</p>
+</main>
+
+    <script>
+        const burgerBtn = document.getElementById('burgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        burgerBtn.addEventListener('click', () => {
+            burgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

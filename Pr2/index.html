@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація на конференцію</title>
+</head>
+<body>
+
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQojwiqarIsXj2FxbqNjfXiy0dWlClERjMD5SgZkuPIBA&s=10" alt="Логотип конференції">
+        <h1>IT Future 2024</h1>
+        <p>Дивіться промо-відео події:</p>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qwutQL029lo?si=dbGnyEF9Uv6qeyFR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </header>
+
+    <main>
+        <h2>Форма реєстрації</h2>
+        <form action="/submit" method="POST">
+            
+            <fieldset>
+                <legend>Особисті дані</legend>
+                
+                <label bitwise for="fullname">ПІБ: </label>
+                <input type="text" id="fullname" name="fullname" placeholder="Іванов Іван" required>
+                <br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Деталі участі</legend>
+                
+                <p>Ваш рівень:</p>
+                <label>
+                    <input type="radio" name="level" value="jun" checked> Junior
+                </label>
+                <label>
+                    <input type="radio" name="level" value="mid"> Middle
+                </label>
+                <label>
+                    <input type="radio" name="level" value="sen"> Senior
+                </label>
+                <br><br>
+                
+                <label for="section">Секція: </label>
+                <select id="section" name="section">
+                    <optgroup label="Frontend">
+                        <option value="react">React</option>
+                        <option value="vue">Vue.js</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                        <option value="node">Node.js</option>
+                        <option value="python">Python</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            
+            <br>
+            
+            <label>
+                <input type="checkbox" name="agree" required> Я погоджуюсь на обробку персональних даних
+            </label>
+            <br><br>
+            
+            <button type="submit">Зареєструватися</button>
+        </form>
+    </main>
+
+    <footer>
+        <h3>Місце проведення події</h3>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2746.9032644265785!2d30.72089237532463!3d46.48252227110879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63193a781e467%3A0x38964f583dca4a38!2z0JrRg9C30L3QtdGH0L3QsNGPINGDOLsuLCAxLCDQntC00LXRgdGB0YwsINCe0LTQtdGB0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDY1MDAw!5e0!3m2!1sru!2sua!4v1771352508317!5m2!1sru!2sua" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <h3>Відгуки учасників</h3>
+        <figure>
+            <figcaption>Аудіо-відгук Олени:</figcaption>
+            <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+        </figure>
+    </footer>
+
+</body>
+</html>
